@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Layout/Header';
-import Nav from './Layout/Nav';
-import Footer from './Layout/Footer';
-import style from './Assets/style.css'
+import "./App.css";
+import Header from "./Layout/Header.jsx";
+import Nav from "./Layout/Nav";
+import Footer from "./Layout/Footer";
+import style from "./Assets/style.css";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-          <Nav />
-          <Header></Header>
-          <Footer></Footer>
+      <Header></Header>
+      <Nav />
+      <Footer></Footer>
     </div>
   );
 }
