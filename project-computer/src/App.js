@@ -5,35 +5,24 @@ import Nav from "./Layout/Nav";
 import Footer from "./Layout/Footer";
 import style from "./Assets/style.css";
 import Showproduct from "./Layout/Productcarousel";
-import Productcarousel from "./Layout/Productcarousel";
 import Homepage from "./Layout/Homepage";
-import Productvid from "./Layout/Productvid";
 import Productcategory from "./Layout/Productcategory";
 import Login from "./Layout/Login";
+import Signin from "./Layout/Signin";
+import { Routes, Route } from "react-router-dom";
+import Phone from "./Layout/phone/Phone";
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <Nav />
-      {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "70%",
-          margin: "auto",
-        }}
-      >
-        <Productcarousel />
-        <Productvid />
-      </div>
-      <div>
-        <Productcategory />
-      </div>
-
-      <Homepage /> */}
-      <Login />
+      {/* <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Signin" element={<Signin />} />
+      </Routes> */}
+      {/* <Login /> */}
       <Footer></Footer>
     </div>
   );
