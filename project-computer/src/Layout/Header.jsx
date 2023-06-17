@@ -1,5 +1,6 @@
 import { React } from "react";
 import "../Assets/header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -27,28 +28,32 @@ const Header = () => {
         </div>
         <div className="button">
           <button className="account-btn">
-            <div>
-              <img
-                src="https://mobilecity.vn/public/assets/img/icon_login.png"
-                alt=""
-                className="account-ava"
-              />
-              <div>Đăng nhập</div>
-            </div>
+            <Link to="/Login">
+              <div>
+                <img
+                  src="https://mobilecity.vn/public/assets/img/icon_login.png"
+                  alt=""
+                  className="account-ava"
+                />
+                <div>Đăng nhập</div>
+              </div>
+            </Link>
           </button>
           <button className="account-btn">
-            <div>
-              <img
-                src="https://mobilecity.vn/public/assets/img/icon_login.png"
-                alt=""
-                className="account-ava"
-              />
-              <div>Đăng kí</div>
-            </div>
+            <Link to="/Signin">
+              <div>
+                <img
+                  src="https://mobilecity.vn/public/assets/img/icon_login.png"
+                  alt=""
+                  className="account-ava"
+                />
+                <div>Đăng kí</div>
+              </div>
+            </Link>
           </button>
         </div>
         <div className="header-opt">
-          <div>TIN TỨC</div>
+          <div>GIỎ HÀNG</div>
           <div>EVENTS</div>
           <div>TRA CỨU BH</div>
         </div>
