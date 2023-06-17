@@ -1,0 +1,238 @@
+* {
+   
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .fa-star {
+    color: orangered;
+    
+  }
+.detail-content-top {
+  margin: 200px 200px -100px 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-content {
+  margin: 200px;
+  border-top: 1px solid #cad1d7;
+  display: grid;
+  grid-template-columns: auto auto;
+}  
+/* .image-detail {
+  display: flex;
+  flex-direction: column;
+} */
+.specifications {
+  background-color: #eaeff3;
+  border: 1px solid #cad1d7 ;
+  border-radius: 4px;
+  vertical-align: baseline;
+  padding: 15px 20px;
+  margin-bottom: 16px;
+}
+.moree {
+  display: flex;
+}
+.moree-item  {
+ 
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.moree-item a {
+  text-decoration: none;
+  color: #495057;
+}
+.moree-item a:hover {
+  color: #0168fa;
+}
+.detail-right-top {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-right {
+  width: 600px;
+  height: 800px; /* Chiều cao của phần tử chứa nội dung */
+  overflow-y: scroll; /* Thêm thanh cuộn */
+ 
+}
+.detail-right::-webkit-scrollbar { 
+  width: 0 !important;
+  display: none; 
+}
+.choose-cost {
+  display:flex ;
+  justify-content: space-around;
+}
+.choose-color {
+  display: flex;
+  margin: 15px;
+  text-align: center;
+}
+.promo {
+  padding: 10px;
+  background-color: #eaeff3;
+  border: 1px solid #cad1d7 ;
+}
+.buyy {
+  display: grid;
+  grid-template-areas: 'myArea myArea ';
+  gap: 10px;
+  margin-top: 15px;
+  border: 1px solid #cad1d7 ;
+  padding: 10px;
+}
+.buyy-item1  {
+  grid-area: myArea;
+  width: 100;
+  background-color: #cb1c22;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  
+}
+.buyy-item1 a ,.buyy-item2 a {
+  text-decoration: none;
+  color: white;
+}
+.buyy-item2 {
+  color: white;
+  background-color: #0664f9;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+}
+/* tiép tục */
+.add-them {
+  font-size: large;
+  margin-top: 10px;
+  height:50px;
+  background-color:#cb1c22 ;
+  color: white;
+   
+  color: 'white';
+  border-radius: 5px;
+
+}
+.suggest-content-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.imagee-content {
+  border: 1px solid #dee2e6;
+  padding: 5px;
+}
+.btn-addtocard {
+  margin-left: 300px;
+ 
+}
+
+.choose-item-loc {
+  width:50%;
+  border: 1px solid #BFC8E5;
+  border-radius: 5px;
+}
+.choose-btn {
+  background: white;
+  border: none;
+}
+.choose-search-text {
+  border: none;
+  outline: none;
+  font-size: large;
+  list-style: 200px;
+  margin-top: 5px; 
+  padding: 20px;
+}
+.question {
+  margin: -100px 200px 100px 200px;
+  border: 2px solid rgb(203, 195, 195);
+  border-radius: 5px;
+  padding: 30px;
+  
+}
+.question-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+ border-top: 1px solid rgb(203, 195, 195);
+}
+.fa-circle-plus {
+  margin-top: 10px;
+  font-size: 30px;
+}
+.comment {
+  margin: 200px;
+  padding: 30px;
+}
+.comment-item {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.process {
+  display: flex;
+  justify-content: center;
+  
+}
+.process-line {
+  margin-top: 15px;
+  background: #edeeef;
+  height: 8px;
+  width: 200px;
+  border-radius: 4px;
+  position: relative;
+}
+.process-line-bar {
+  padding: 5px;
+  background: #48bb78;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+.procces-text {
+  margin-left: 5px;
+  margin-top: 5px;
+  
+}
+.comment {
+  margin-top: 20px;
+  border: 2px solid rgb(203, 195, 195);
+  border-radius: 5px;
+}
+.ask-anser {
+  margin: -100px 200px 200px 200px;
+}
+.ask-anser-item {
+  padding: 30px;
+  border: 1px solid rgb(203, 195, 195);
+  display: flex;
+  justify-content: space-between;
+}
+.comm {
+  padding: 30px;
+  border: 1px solid rgb(203, 195, 195);
+}
+.te, .comm-item {
+  border: 1px solid rgb(203, 195, 195);
+  padding: 20px;
+}
+.comm-ip {
+  border: none;
+  outline: none;
+  width: 80%;
+  font-size: 20px;
+}
+
+.logo-name {
+  display: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(157, 149, 149)
+}
