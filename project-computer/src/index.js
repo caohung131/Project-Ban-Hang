@@ -5,7 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
+<<<<<<< HEAD
 const root = ReactDOM.createRoot(document.getElementById("root"));
+=======
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+>>>>>>> f8a89d75cca4120c35d431b8f090ec90626e2bcb
 root.render(
   // <React.StrictMode>
     <BrowserRouter>

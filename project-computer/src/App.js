@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "mdb-ui-kit/css/mdb.min.css";
 import "./App.css";
 import Header from "./Layout/Header";
@@ -26,6 +27,24 @@ function App() {
       </Routes>
       {/* <Login /> */}
       <Footer></Footer>
+=======
+import logo from './logo.svg';
+import './App.css';
+import Header from './Layout/Header';
+import Nav from './Layout/Nav';
+import Footer from './Layout/Footer';
+import style from './Assets/style.css'
+// import Homepage from './pages/Homepage/Homepage';
+import detail from './Assets/detail.css';
+import Detail from './Details/Detail.jsx';
+function App() {
+  return (
+    <div className="App">
+         
+        <Detail/>
+
+
+>>>>>>> f8a89d75cca4120c35d431b8f090ec90626e2bcb
     </div>
   );
 }
