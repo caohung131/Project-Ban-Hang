@@ -4,7 +4,8 @@ import "../Assets/signin.css";
 const Login = () => {
   return (
     <>
-      <h1>Đăng nhập</h1>
+    <div className="looggin">
+    <h1>Đăng nhập</h1>
       <form action="">
         <input
           placeholder="     Tên đăng nhập/Email/Số điện thoại"
@@ -24,6 +25,8 @@ const Login = () => {
         <br />
         <button className="log-btn">ĐĂNG NHẬP</button>
       </form>
+    </div>
+     
     </>
   );
 };
