@@ -34,6 +34,7 @@
    background-color: #212a39;
    color: white !important;
    height: 100vh;
+   position: fixed;
  }
 
  .nav-layout-left-main a {
@@ -42,6 +43,8 @@
 
  .main-app {
    width: 80%;
+   /* position: fixed; */
+   margin-left: 20%;
  }
 
  .nav-layout-left-main .start {
@@ -93,6 +96,7 @@
    display: flex;
    align-items: center;
    width: 100%;
+   /* position: fixed; */
  }
 
  .derectional .menu-nav-togger {
@@ -143,6 +147,18 @@
    margin-top: 5vh;
    display: flex;
    justify-content: space-evenly;
+ }
+
+ .chart {
+  width: 100% !important;
+ }
+
+ .chart div {
+  width: 100% !important;
+ }
+
+ .chart canvas {
+  width: 100%;
  }
 
  .layout-4-chart .chart-itemt {
@@ -216,10 +232,42 @@
  }
 
  .table-recent-orders {
+  position: relative  ;
    width: 100%;
    text-align: center;
    border: 1px solid rgb(158, 154, 154);
    border-collapse: collapse;
+ }
+
+ .sub-crud {
+  width: 100%;
+  background-color: wheat;
+ }
+
+ .sub-crud tr:nth-of-type(1) {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .sub-crud tr:nth-of-type(2) {
+  width: 10%;
+ }
+
+ .sub-crud tr:nth-of-type(2) input {
+  width: 100%;
+ }
+
+ .sub-crud tr:nth-of-type(3) {
+  width: 100%;
+ }
+
+ .sub-crud tr:nth-of-type(3) td{
+  column-span: 5;
+ }
+
+
+ .sub-crud td{
  }
 
  tr td {
@@ -235,4 +283,8 @@
    display: flex;
    justify-content: space-between;
    padding-right: 5%;
+ }
+
+ .sub-crud {
+  display: none;
  }

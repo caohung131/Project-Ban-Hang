@@ -1,12 +1,15 @@
-import React from "react";
-import './admin.css'
-import { DatePicker } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import "./admin.css";
+import { DatePicker } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import gau from "./Image/avatar-gau.png";
 
 //chart js
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut } from "react-chartjs-2";
+
+import { UserData } from "./Data.js";
 
 // import "./Image";
 
@@ -14,26 +17,41 @@ import { Doughnut } from 'react-chartjs-2';
 import Nav from "./Nav.jsx";
 import ItemNav from "./ItemNav.jsx";
 import ChartItem from "./ChartItem.jsx";
+import TableItem from "./TableItem.jsx";
+import SubCRUD from "./SubCRUD.jsx";
 
 const Admin = () => {
+  const [dataUser, setDataUser] = useState(UserData);
+  // const [id, setID] = useState([])
+  // const [nameProduct, setNameProduct] = useState([])
+  // const [useGain, setUseGain] = useState([])
+  // const [userLost, setUserLost] = useState([])
+  // const [year, setYear] = useState([])
+
+  // console.log(dataUser)
+
+  const handleAddUser = (newUser) => {
+    console.log("DDaay laf file index")
+    console.log(newUser);
+    setDataUser([...dataUser, newUser])
+  }
+
+  console.log("dataUser: ", dataUser)
+
   return (
     <div>
       <div className="page">
         <div className="nav-layout-left-main">
-        
           <Nav></Nav>
+          <ItemNav ></ItemNav>
           <ItemNav></ItemNav>
           <ItemNav></ItemNav>
           <ItemNav></ItemNav>
-          <ItemNav></ItemNav>
-          
-          
-          
-          
+
           <div className="itemt">
             <a href className="itemt-nav-addEvent">
               <div>
-                 <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
               </div>
               <p>DashBoard</p>
               <i className="fas fa-angle-right" />
@@ -69,7 +87,7 @@ const Admin = () => {
               </div>
               <div className="user-nav">
                 <div className="avartar-user-nav">
-                  <img src="./Image/avatar-gau.png" alt="" />
+                  <img src={gau} alt="" />
                 </div>
                 <p className="name-user">Hung</p>
                 <i className="fas fa-angle-down" />
@@ -78,17 +96,16 @@ const Admin = () => {
           </div>
           <div className="container">
             <div className="layout-4-chart">
-             <ChartItem></ChartItem>
-             <ChartItem></ChartItem>
-             <ChartItem></ChartItem>
-             <ChartItem></ChartItem>
-              
+              <ChartItem></ChartItem>
+              <ChartItem></ChartItem>
+              <ChartItem></ChartItem>
+              <ChartItem></ChartItem>
             </div>
             <div className="layout-sale">
               <div className="layout-sale-left">
                 <h3>Sales Of The Year</h3>
                 <div className="itemt-left">
-                  <canvas id="myChart5" />
+                  <ChartItem></ChartItem>
                 </div>
                 <div className="price-itemt">
                   <div>
@@ -104,7 +121,7 @@ const Admin = () => {
               <div className="layout-sale-right">
                 <h3>Sales Of The Year</h3>
                 <div className="itemt-left">
-                  <canvas id="myChart6" />
+                  <ChartItem></ChartItem>
                 </div>
                 <a href="#" className="download-report">
                   <i className="fab fa-instalod" />
@@ -143,76 +160,9 @@ const Admin = () => {
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
-                  <tr>
-                    <td>24541</td>
-                    <td>Coach Swagger</td>
-                    <td>1 Unit</td>
-                    <td>Oct 20, 2018</td>
-                    <td>$230</td>
-                    <td>COMPLETED</td>
-                    <td>
-                      <button onclick>Add</button>
-                      <button onclick>Delete</button>
-                      <button onclick>Update</button>
-                      <button onclick>Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>24541</td>
-                    <td>Coach Swagger</td>
-                    <td>1 Unit</td>
-                    <td>Oct 20, 2018</td>
-                    <td>$230</td>
-                    <td>COMPLETED</td>
-                    <td>
-                      <button onclick>Add</button>
-                      <button onclick>Delete</button>
-                      <button onclick>Update</button>
-                      <button onclick>Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>24541</td>
-                    <td>Coach Swagger</td>
-                    <td>1 Unit</td>
-                    <td>Oct 20, 2018</td>
-                    <td>$230</td>
-                    <td>COMPLETED</td>
-                    <td>
-                      <button onclick>Add</button>
-                      <button onclick>Delete</button>
-                      <button onclick>Update</button>
-                      <button onclick>Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>24541</td>
-                    <td>Coach Swagger</td>
-                    <td>1 Unit</td>
-                    <td>Oct 20, 2018</td>
-                    <td>$230</td>
-                    <td>COMPLETED</td>
-                    <td>
-                      <button onclick>Add</button>
-                      <button onclick>Delete</button>
-                      <button onclick>Update</button>
-                      <button onclick>Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>24541</td>
-                    <td>Coach Swagger</td>
-                    <td>1 Unit</td>
-                    <td>Oct 20, 2018</td>
-                    <td>$230</td>
-                    <td>COMPLETED</td>
-                    <td>
-                      <button onclick>Add</button>
-                      <button onclick>Delete</button>
-                      <button onclick>Update</button>
-                      <button onclick>Delete</button>
-                    </td>
-                  </tr>
+
+
+                  <TableItem UserData={dataUser} handleAddUser={handleAddUser}/>
                 </tbody>
               </table>
             </div>
