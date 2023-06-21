@@ -1,13 +1,19 @@
 h1 {
   color: #c69a39;
+  
 }
-
+.looggin {
+  text-align: center;
+ 
+}
 .sign-input {
   width: 20%;
   height: 4vh;
   border: none;
   border-radius: 5px;
   background-color: #f0f0f0;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 .log-btn {

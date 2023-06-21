@@ -4,6 +4,7 @@ import "../Assets/signin.css";
 const Signin = () => {
   return (
     <>
+      <div className="looggin">
       <h1>Đăng ký</h1>
       <form action="">
         <input
@@ -24,6 +25,7 @@ const Signin = () => {
         <br />
         <button className="log-btn">ĐĂNG KÝ</button>
       </form>
+      </div>
     </>
   );
 };

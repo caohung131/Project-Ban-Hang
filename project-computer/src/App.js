@@ -11,17 +11,19 @@ import Login from "./Layout/Login";
 import Signin from "./Layout/Signin";
 import { Routes, Route } from "react-router-dom";
 import Phone from "./Layout/phone/Phone";
-
+import Index from "./components/Index.jsx"
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <Nav />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/components/:blogId" element={<Index />} /> 
         <Route path="/Signin" element={<Signin />} />
-      </Routes> */}
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
+      </Routes>
       {/* <Login /> */}
       <Footer></Footer>
     </div>
