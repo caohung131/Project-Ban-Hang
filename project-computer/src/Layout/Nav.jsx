@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import "../Assets/nav.css";
 import { Link } from "react-router-dom";
 
@@ -16,10 +16,12 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-item">
-          <span className="nav-item">
-            <i class="fas fa-mobile-screen-button"></i>
-          </span>
-          <span>Điện thoại</span>
+          <Link to="/Phone">
+            <span className="nav-item">
+              <i class="fas fa-mobile-screen-button"></i>
+            </span>
+            <span>Điện thoại</span>
+          </Link>
         </div>
         <div className="nav-item">
           <span>
@@ -46,7 +48,6 @@ const Nav = () => {
           </span>
           <span>Sửa chữa</span>
         </div>
-       
       </div>
     </div>
   );
