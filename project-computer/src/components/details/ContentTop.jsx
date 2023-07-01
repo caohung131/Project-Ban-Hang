@@ -1,10 +1,10 @@
 import React from 'react'
 
- const ContentTop = ({name}) => {
+ const ContentTop = ({name,scrollToFAQ }) => {
   return (
     <div className="detail-content-top">
       <h1>{name} </h1> 
-      <a href><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" />314 đánh giá | 21 Hỏi &amp; đáp <i className="fa-solid fa-circle-plus" /> So sánh</a>
+      <h5 style={{cursor:'pointer', color:'rgb(203, 28, 34)'}} onClick={scrollToFAQ} href><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" />  Hỏi &amp; đáp </h5>
     </div>
   )
 }
