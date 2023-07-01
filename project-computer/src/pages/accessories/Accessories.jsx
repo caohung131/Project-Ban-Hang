@@ -7,7 +7,7 @@ import Product from "./Product";
 import Emty from "./Emty";
 import { Context } from "../../context/Context";
 
-const Phone = () => {
+const Accessories = () => {
   const { product, sortProduct } = useContext(Context);
 
   const [page, setPage] = useState(1);
@@ -73,7 +73,7 @@ const Phone = () => {
       <div style={{ width: "70%", margin: "auto" }}>
         <section class="section-pagetop bg">
           <div class="container">
-            <h2 class="title-page">Điện thoại</h2>
+            <h2 class="title-page">Phụ kiện</h2>
           </div>
         </section>
 
@@ -163,4 +163,4 @@ const Phone = () => {
     </>
   );
 };
-export default Phone;
+export default Accessories;

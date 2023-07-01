@@ -35,7 +35,7 @@ const Cardproduct = (item) => {
               </div>
               {/* Product price*/}
               <span className="text-muted text-decoration-line-through"></span>
-              {price}
+              {price} đ
             </div>
           </div>
           {/* Product actions*/}

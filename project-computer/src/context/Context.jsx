@@ -7,7 +7,7 @@ export const ContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch(`https://6485ce2fa795d24810b7565b.mockapi.io/api/v1/blog`)
+    fetch(`https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs`)
       .then((response) => {
         return response.json();
       })
@@ -53,6 +53,19 @@ export const ContextProvider = (props) => {
     console.log(searchTerm);
   };
 
+  // SORT
+  const sortProduct = (sortBy) => {
+    let sortedProduct = [...product];
+
+    if (sortBy === "asc") {
+      sortedProduct.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "desc") {
+      sortedProduct.sort((a, b) => b.price - a.price);
+    }
+
+    setProduct(sortedProduct);
+  };
+
   const contextValue = {
     product,
     setProduct,
@@ -64,6 +77,7 @@ export const ContextProvider = (props) => {
     setValue,
     onchange,
     onSearch,
+    sortProduct,
   };
   // console.log(cartItems);
   return (

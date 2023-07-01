@@ -13,7 +13,7 @@ const Homepage = () => {
   const [load, setLoad] = useState(true);
   useEffect(() => {
     fetch(
-      `https://6485ce2fa795d24810b7565b.mockapi.io/api/v1/blog?page=${page}&limit=8`
+      `https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs?page=${page}&limit=8`
     )
       .then((response) => {
         return response.json();
@@ -59,7 +59,7 @@ const Homepage = () => {
                   key={item.id}
                   name={item.name}
                   avatar={item.avatar}
-                  price={item.price}
+                  price={item.cost}
                 />
               ))}
             </div>

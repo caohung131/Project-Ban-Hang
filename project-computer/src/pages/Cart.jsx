@@ -127,14 +127,6 @@ export default function QuantityEdit() {
                         <MDBTypography tag="h5">{itemPrice} ₫</MDBTypography>
                       </div>
 
-                      <MDBTypography tag="h5" className="text-uppercase mb-3">
-                        Mã giảm giá
-                      </MDBTypography>
-
-                      <div className="mb-5">
-                        <MDBInput size="lg" label="Enter your code" />
-                      </div>
-
                       <hr className="my-4" />
 
                       <div className="d-flex justify-content-between mb-5">

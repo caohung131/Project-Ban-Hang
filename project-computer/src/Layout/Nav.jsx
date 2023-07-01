@@ -16,7 +16,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-item">
-          <Link to="/Phone">
+          <Link to="/phone">
             <span className="nav-item">
               <i class="fas fa-mobile-screen-button"></i>
             </span>
@@ -24,22 +24,29 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-item">
-          <span>
-            <i class="fas fa-tablet-screen-button"></i>
-          </span>
-          <span>Máy tính bảng</span>
+          <Link to="/tablet">
+            <span>
+              <i class="fas fa-tablet-screen-button"></i>
+            </span>
+            <span>Máy tính bảng</span>
+          </Link>
         </div>
         <div className="nav-item">
-          <span>
-            <i class="fas fa-tv"></i>
-          </span>
-          <span>Máy cũ giá rẻ</span>
+          <Link to="/oldproduct">
+            <span>
+              <i class="fas fa-tv"></i>
+            </span>
+            <span>Máy cũ giá rẻ</span>
+          </Link>
         </div>
+
         <div className="nav-item">
-          <span>
-            <i class="fas fa-charging-station"></i>
-          </span>
-          <span>Phụ kiện</span>
+          <Link to="/accessories">
+            <span>
+              <i class="fas fa-charging-station"></i>
+            </span>
+            <span>Phụ kiện</span>
+          </Link>
         </div>
 
         <div className="nav-item">
