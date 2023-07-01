@@ -77,7 +77,7 @@ const Index = () => {
    <div>
     <AskAnswer faqRef={faqRef} />
    </div>
-  
+  {/* check  */}
 </div>
 
   )
