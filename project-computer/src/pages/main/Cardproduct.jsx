@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { Context } from "../../context/Context";
 
@@ -9,7 +10,7 @@ const Cardproduct = (item) => {
 
   return (
     <>
-      <div className="col mb-5" style={{ width: "25%" }}>
+      <div  className="col mb-5" style={{ width: "25%" }}>
         <div className="card h-100">
           {/* Sale badge*/}
           <div
@@ -18,10 +19,11 @@ const Cardproduct = (item) => {
           >
             Sale
           </div>
-          {/* Product image*/}
-          <img className="card-img-top" src={item.avatar} alt="..." />
+          
           {/* Product details*/}
-          <div className="card-body p-4">
+          <Link style={{textDecoration:'none'}} to ={`/details/${id}`} className="card-body p-4">
+            {/* Product image*/}
+          <img className="card-img-top" src={item.avatar} alt="..." />
             <div className="text-center">
               {/* Product name*/}
               <h5 className="fw-bolder">{name}</h5>
@@ -37,7 +39,7 @@ const Cardproduct = (item) => {
               <span className="text-muted text-decoration-line-through"></span>
               {price}
             </div>
-          </div>
+          </Link>
           {/* Product actions*/}
           <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div className="text-center">

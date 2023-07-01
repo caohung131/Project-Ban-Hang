@@ -2,35 +2,42 @@ import React , { useState } from 'react'
 
 import Infor from './Infor';
 import { UncontrolledCarousel } from 'reactstrap'; 
-const images = [
+
+
+ const ContentLeftRight = (props) => {
+  const {cost,saleCost,sizePhone,cpu,imageChange1,imageChange2,imageChange3} = props;
+  const images = [
     {
-      src: 'https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/10/28/638025697712034572_iPhone%2014%20Promax%20(1).jpg',
-      altText: '',
-      caption: '',
-      header: ''
+      src: imageChange1,
+    
     },
     {
-        src: 'https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/10/28/638025697714065864_iPhone%2014%20Promax%20(4).jpg',
+        src: imageChange2,
         altText: '',
         caption: '',
         header: ' '
       },
       {
-        src: 'https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2022/10/28/638025697716104054_iPhone%2014%20Promax%20(3).jpg',
+        src: imageChange3,
         altText: '',
         caption: '',
         header: ''
       }
     ];
+ const handleChangeImage = (i) => {
+  setIndexImage(i)
+ }
+ 
+ const [indexImage,setIndexImage] = useState(0)
 
- const ContentLeftRight = () => {
     const [data,setData] = useState({name:"ip14", size:128})
   return (
     <div className="detail-content">
     {/* nav left */}
     <div className="detail-content-left" style={{marginRight:'50px'}}>
       {/* <Images/> */}
-      <UncontrolledCarousel items={images} />
+      <UncontrolledCarousel activeIndex={indexImage} items={images} style={{maxWidth:"70%",maxHeight:"50%", marginLeft:'15%' }} 
+      />
         <div className="moree">
           <div className="moree-item">
             <a href=''><i className="fa-regular fa-image" /> <br /> Xem thêm 17 ảnh </a>
@@ -44,10 +51,10 @@ const images = [
        
       </div>
       <div className="specifications">
-        <p style={{padding:'5px'}}><i className="fa-solid fa-mobile-screen-button" /> 6.7 inch, Super Retina XDR, 2796 x 1290 Pixels</p>
+        <p style={{padding:'5px'}}><i className="fa-solid fa-mobile-screen-button" /> {sizePhone}</p>
         <p style={{padding:'5px'}}><i className="fa-solid fa-record-vinyl" /> 48.0 MP + 12.0 MP + 12.0 MP</p>
         <p style={{padding:'5px'}}><i className="fa-solid fa-camera-rotate" /> 12.0 MP</p>
-        <p style={{padding:'5px'}}><i className="fa-solid fa-note-sticky" /> Apple A16 Bionic</p>
+        <p style={{padding:'5px'}}><i className="fa-solid fa-note-sticky" /> {cpu}</p>
         <p style={{padding:'5px'}}><i className="fa-solid fa-microchip"  />{data.size} GB</p>
         
          <Infor/>
@@ -57,13 +64,13 @@ const images = [
     {/* nav right */}
     <div className="detail-right">
       <div className="detail-right-top">
-        <h1 style={{color: '#cb1c22'}} className="cost">26.580.000đ <span style={{textDecoration: 'line-through', color: 'gray', fontSize: '20px'}} className="cost-fake">29.990.000đ</span></h1>
+        <h1 style={{color: '#cb1c22'}} className="cost">{cost}đ <span style={{textDecoration: 'line-through', color: 'gray', fontSize: '20px'}} className="cost-fake">{saleCost}đ</span></h1>
         <p>Trả góp chỉ từ <br /> 1.934.500đ/tháng</p>
       </div>
       <div className="choose-phone">
         <div className="choose-cost">
           <div className="choose-cost-item">
-            <input name="gender" type="radio" onChange={()=>setData({...data,size:128})} />128 GB <br />26.580.000đ
+            <input name="gender" type="radio" onChange={()=>setData({...data,size:128})} />128 GB <br />{cost}
           </div> 
           <div className="choose-cost-item">
             <input name="gender" type="radio" onChange={()=>setData({...data,size:256})} />256 GB <br />29.690.000đ
@@ -76,27 +83,24 @@ const images = [
           </div>
         </div> 
         <div className="choose-color">
-          <div className="choose-color-item">
-            <img style={{maxWidth: '70px'}} src="https://i.pinimg.com/236x/52/e0/5f/52e05feaee70b1d139e98bf373230569.jpg" alt="" />
+          <div className="choose-color-item" >
+            <img onClick={()=>handleChangeImage(0)} style={{maxWidth: '70px'}}  src={imageChange1}  alt="" />
             <p>Đen</p>
           </div>
           <div className="choose-color-item">
-            <img style={{maxWidth: '70px'}} src="https://i.pinimg.com/236x/d8/58/ff/d858ff509c4650e1a5291ed71ffddc74.jpg" alt="" />
+            <img onClick={()=>handleChangeImage(1)}  style={{maxWidth: '70px'}} src={imageChange2} alt="" />
             <p>Tím</p>
           </div>
           <div className="choose-color-item">
-            <img style={{maxWidth: '70px'}} src="https://i.pinimg.com/236x/3e/a4/15/3ea415e268f94aaa4f5f31f1e6fb8aab.jpg" alt="" />
+            <img onClick={()=>handleChangeImage(2)}  style={{maxWidth: '70px'}} src={imageChange3} alt="" />
             <p>Vàng</p>
           </div>
-          <div className="choose-color-item">
-            <img style={{maxWidth: '70px'}} src="https://i.pinimg.com/236x/16/1b/25/161b25f04077d0d035e0dc28ec3d88d5.jpg" alt="" />
-            <p>Bạc</p>
-          </div>
+          
         </div>
       </div>
       <div className="promo">
         <p>Chọn 1 trong 2 khuyến mãi sau</p>
-        <input name="gender" type="radio" style={{marginTop: '10px'}} /> Giảm ngay 2.900 áp dụng khi mua màu Tím áp dụng đến 05/06<br />
+        <input name="gender" type="radio" style={{marginTop: '10px'}} /> Giảm ngay 2.900 áp dụng khi mua áp dụng đến 05/06<br />
         <input name="gender" type="radio" style={{marginTop: '10px'}} /> Giảm ngay 400 áp dụng đến 05/06 + Trả góp 0%
       </div>
       <div className="buyy">

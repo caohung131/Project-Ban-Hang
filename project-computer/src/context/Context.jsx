@@ -7,7 +7,7 @@ export const ContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch(`https://6485ce2fa795d24810b7565b.mockapi.io/api/v1/blog`)
+    fetch(`https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs`)
       .then((response) => {
         return response.json();
       })
