@@ -3,15 +3,16 @@ import React, { useEffect, useState } from "react";
 const SubCRUD = (props) => {
   const [showSubCRUD, setShowSubCRUD] = useState(1);
   const [id, setID] = useState("");
-  const [name, setName] = useState("");
+  const [year, setYear] = useState("");
   const [date, setDate] = useState("");
-  const [unit, setUnit] = useState("");
-  const [cost, setCost] = useState("");
+  const [useGain, setUseGain] = useState("");
+  const [userLost, setUserLost] = useState("");
   const [newDataUser, setNewDataUser] = useState([]);
 
   const handleCloseCRUD = () => {
     return showSubCRUD === 1 ? setShowSubCRUD("show") : setShowSubCRUD("");
   };
+
 
   const handleChangeId = (e) => {
     setID(e.target.value);
@@ -19,32 +20,32 @@ const SubCRUD = (props) => {
 
   const handleChangeName = (e) => {
     // let value = e.target.value;
-    setName(e.target.value);
-    console.log(name);
+    setYear(e.target.value);
+    console.log(year);
 
   };
 
   const handleChangeDate = (e) => {
-    setDate(e.target.value);
-    console.log(date);
+    setUseGain(e.target.value);
+    console.log(useGain);
     console.log(e.target.value);
   };
 
   const handleChangeUnit = (e) => {
-    setUnit(e.target.value);
+    setUserLost(e.target.value);
     };
 
-  const handleChangeCost = (e) => {
-    setCost(e.target.value);
-    };
+  // const handleChangeCost = (e) => {
+  //   setCost(e.target.value);
+  //   };
 
   const handleClick = (e) => {
     const newProduct = {
       id : id,
-      name: name,
+      year: year,
       date:date,
-      unit: unit,
-      cost: cost
+      useGain: useGain,
+      userLost: userLost
     }
 
 
@@ -59,8 +60,6 @@ const SubCRUD = (props) => {
   //  ( setShowSubCRUD('') === '' ? '' : 1 )
     
   }
-
-  console.log(newDataUser)
 
   useEffect(()=>{
     setNewDataUser(props.UserData)
@@ -86,7 +85,7 @@ const SubCRUD = (props) => {
       </tr>
       <tr>
         <td>
-          <input value={1} disabled={true} />
+          <input value={1} disabled={true}/>
         </td>
         <td>
           <input name="id" onChange={handleChangeId} />
@@ -101,13 +100,13 @@ const SubCRUD = (props) => {
           <input name="date" onChange={handleChangeDate} />
         </td>
         <td>
-          <input name="cost" onChange={handleChangeCost} />
+          <input name="cost"/>
         </td>
       </tr>
       <tr>
         <td>
           <button onClick={handleClick}>Add</button>
-        </td>
+        </td>``
 
       </tr>
     </div>

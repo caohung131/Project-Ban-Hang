@@ -1,0 +1,66 @@
+/*  */
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.toDoApp {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;   
+}
+
+/* .valueShow {
+    width: 90%;
+} */
+
+tr td:nth-of-type(2) {
+    width: 30%;
+}
+
+tr td {
+    justify-content: space-around;
+    border: none;
+    width: 100%;
+    display: flex;
+}
+
+/* tr td:nth-of-type(0) {
+    width: 90%;
+} */
+
+tr {
+    border: 1px solid rgb(211, 209, 209);
+    display: flex;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 40%;
+}
+
+.img-quote {
+    display: flex;
+    justify-content: center;
+}
+
+.pageToDo {
+    display: flex;
+}
+
+.content-main-left {
+    width: 40%;
+}
+
+.content-main-right {
+    width: 60%;
+}

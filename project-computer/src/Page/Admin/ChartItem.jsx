@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import LineChartTest from './LinechartTest.jsx'
-import { UserData } from './Data.js'
-
 
 const ChartItem = () => {
   
