@@ -11,11 +11,11 @@ const Tablet = () => {
   const { product, sortProduct } = useContext(Context);
 
   const [page, setPage] = useState(1);
-  const [selectedPrice, setSelectedPrice] = useState([0, 50000000]);
+  const [selectedPrice, setSelectedPrice] = useState([0, 1000]);
   const [resultFound, setResultFound] = useState(true);
   const [list, setList] = useState(product);
   const [brand, setBrand] = useState([
-    { id: 1, checked: false, label: "iPhone" },
+    { id: 1, checked: false, label: "ipad" },
     { id: 2, checked: false, label: "Samsung" },
     { id: 3, checked: false, label: "Xiaomi" },
     { id: 4, checked: false, label: "Realme" },

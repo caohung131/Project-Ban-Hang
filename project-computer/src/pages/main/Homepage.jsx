@@ -1,40 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import Cardproduct from "./Cardproduct";
-import Productcarousel from "./Productcarousel";
 import Productvid from "./Productvid";
+import { Context } from "../../context/Context";
+import ProductList from "./ProductList";
+
+// import "../../Assets/productcategory.css";
 
 const Homepage = () => {
-  const [listProduct, setListProduct] = useState([]);
-  const [page, setPage] = useState(1);
+  const { searchProduct, handleSelectPage, listProduct, load, page } =
+    useContext(Context);
 
-  const handleSelectPage = (pg) => {
-    setPage(pg);
-  };
-  const [load, setLoad] = useState(true);
-  useEffect(() => {
-    fetch(
-      `https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs?page=${page}&limit=8`
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setListProduct(data);
-        setLoad(false);
-      });
-  }, [page]);
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "70%",
-          margin: "auto",
-        }}
-      >
-        <Productcarousel />
+      <div className="homepage">
         <Productvid />
       </div>
 
@@ -49,22 +27,9 @@ const Homepage = () => {
           </div>
         ) : (
           <div className="container px-4 px-lg-5 mt-5">
-            <div
-              className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-              style={{ width: "91%", margin: "auto" }}
-            >
-              {listProduct.map((item) => (
-                <Cardproduct
-                  id={item.id}
-                  key={item.id}
-                  name={item.name}
-                  avatar={item.avatar}
-                  price={item.cost}
-                />
-              ))}
-            </div>
+            <ProductList />
 
-            <div style={{ margin: "auto" }}>
+            <div style={{ marginLeft: "42%" }}>
               {/* <!-- Pager--> */}
               <ul className="pagination" style={{ margin: "auto" }}>
                 <li className="page-item disabled">

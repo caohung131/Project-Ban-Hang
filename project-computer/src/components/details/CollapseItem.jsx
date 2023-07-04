@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 
+
  const CollapseItem = (props) => {
-    const {title,description} = props
+    const {title,decription} = props
 
    const [show, setShow] = useState (false);
-   
-
-
   return (
   
 <>
@@ -16,7 +14,7 @@ import React, { useState } from 'react'
     </div>
     <div >
       {show === true 
-      ? ( <h5>{description}</h5>) 
+      ? ( <h5>{decription}</h5>) 
       :( <h5> </h5>)}
     </div>
     </>

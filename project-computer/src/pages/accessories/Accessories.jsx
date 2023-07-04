@@ -11,19 +11,19 @@ const Accessories = () => {
   const { product, sortProduct } = useContext(Context);
 
   const [page, setPage] = useState(1);
-  const [selectedPrice, setSelectedPrice] = useState([0, 50000000]);
+  const [selectedPrice, setSelectedPrice] = useState([0, 1000]);
   const [resultFound, setResultFound] = useState(true);
   const [list, setList] = useState(product);
   const [brand, setBrand] = useState([
-    { id: 1, checked: false, label: "iPhone" },
+    { id: 1, checked: false, label: "no brand" },
     { id: 2, checked: false, label: "Samsung" },
     { id: 3, checked: false, label: "Xiaomi" },
     { id: 4, checked: false, label: "Realme" },
     { id: 5, checked: false, label: "Oppo" },
-    { id: 6, checked: false, label: "Iphone" },
+    { id: 6, checked: false, label: "anker" },
     { id: 7, checked: false, label: "Vivo" },
     { id: 8, checked: false, label: "Nokia" },
-    { id: 9, checked: false, label: "ROG Phone" },
+    { id: 9, checked: false, label: "mashall" },
   ]);
 
   const handleSelectPage = (pg) => {

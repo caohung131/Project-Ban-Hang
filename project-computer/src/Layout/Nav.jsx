@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React } from "react";
 import "../Assets/nav.css";
 import { Link } from "react-router-dom";
 
@@ -7,16 +7,16 @@ const Nav = () => {
     <div className="navbar">
       <div className="nav">
         <div className="nav-item">
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
             <span>
-              <i class="fas fa-tv"></i>
+              <i class="fas fa-house"></i>
             </span>
             <br></br>
             <span>Trang chủ</span>
           </Link>
         </div>
         <div className="nav-item">
-          <Link to="/phone">
+          <Link to="/phone" style={{ textDecoration: "none", color: "#fff" }}>
             <span className="nav-item">
               <i class="fas fa-mobile-screen-button"></i>
             </span>
@@ -24,36 +24,35 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-item">
-          <Link to="/tablet">
-            <span>
+          <Link to="/tablet" style={{ textDecoration: "none", color: "#fff" }}>
+            <div>
               <i class="fas fa-tablet-screen-button"></i>
-            </span>
-            <span>Máy tính bảng</span>
+            </div>
+            <div>Máy tính bảng</div>
           </Link>
         </div>
         <div className="nav-item">
-          <Link to="/oldproduct">
-            <span>
+          <Link
+            to="/oldproduct"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            <div>
               <i class="fas fa-tv"></i>
-            </span>
-            <span>Máy cũ giá rẻ</span>
+            </div>
+            <div>Máy cũ giá rẻ</div>
           </Link>
         </div>
 
         <div className="nav-item">
-          <Link to="/accessories">
-            <span>
+          <Link
+            to="/accessories"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            <div>
               <i class="fas fa-charging-station"></i>
-            </span>
-            <span>Phụ kiện</span>
+            </div>
+            <div>Phụ kiện</div>
           </Link>
-        </div>
-
-        <div className="nav-item">
-          <span>
-            <i class="fas fa-screwdriver-wrench"></i>
-          </span>
-          <span>Sửa chữa</span>
         </div>
       </div>
     </div>

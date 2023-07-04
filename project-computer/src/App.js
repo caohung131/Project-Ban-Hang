@@ -29,6 +29,7 @@ function App() {
           <Route path="/tablet" element={<Tablet />} />
           <Route path="/oldproduct" element={<OldProduct />} />
           <Route path="/accessories" element={<Accessories />} />
+          <Route path="/details/:blogId" element={<Index />}></Route>
           <Route path="/components/:blogId" element={<Index />} />
         </Routes>
 

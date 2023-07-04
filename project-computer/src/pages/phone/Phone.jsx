@@ -11,7 +11,7 @@ const Phone = () => {
   const { product, sortProduct } = useContext(Context);
 
   const [page, setPage] = useState(1);
-  const [selectedPrice, setSelectedPrice] = useState([0, 50000000]);
+  const [selectedPrice, setSelectedPrice] = useState([0, 1000]);
   const [resultFound, setResultFound] = useState(true);
   const [list, setList] = useState(product);
   const [brand, setBrand] = useState([

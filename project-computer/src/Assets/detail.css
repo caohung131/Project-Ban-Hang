@@ -7,7 +7,7 @@
     
   }
 .detail-content-top {
-  margin: 200px 200px -100px 200px;
+  margin: 50px 200px -100px 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -68,6 +68,17 @@
   display: flex;
   margin: 15px;
   text-align: center;
+}
+.choose-color-item{
+  cursor: pointer;
+}
+.choose-color-item:active {
+  padding: 2px;
+}
+
+.choose-color-item:hover {
+ border: 1px solid black;
+ border-radius: 2px;
 }
 .promo {
   padding: 10px;
@@ -143,7 +154,8 @@
   font-size: large;
   list-style: 200px;
   margin-top: 5px; 
-  padding: 20px;
+  padding: 2px;
+  
 }
 .question {
   margin: -100px 200px 100px 200px;
@@ -203,7 +215,7 @@
   border-radius: 5px;
 }
 .ask-anser {
-  margin: -100px 200px 200px 200px;
+  margin: -100px 200px 100px 200px;
 }
 .ask-anser-item {
   padding: 30px;

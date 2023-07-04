@@ -18,7 +18,6 @@ const Product = ({ list }) => {
             key={prod.id}
             name={prod.name}
             price={prod.cost}
-            đ
             avatar={prod.avatar}
           />
         ))}

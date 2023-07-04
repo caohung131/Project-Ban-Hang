@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 const PriceSlider = ({ value, changedPrice }) => {
   const classes = useStyles();
   const MIN = 0;
-  const MAX = 50000000;
+  const MAX = 1000;
 
   return (
     <>
