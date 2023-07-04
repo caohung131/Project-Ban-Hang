@@ -39,6 +39,7 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form-register">
+      <h1>Đăng nhập</h1>
       <div>
         <input
           type="email"
@@ -48,7 +49,6 @@ const LoginForm = () => {
           className="sign-input"
         />
       </div>
-      <br />
       <br />
 
       <div>
@@ -62,7 +62,7 @@ const LoginForm = () => {
       </div>
       <br />
       <br />
-      <br />
+
       <button type="submit" className="log-btn">
         ĐĂNG NHẬP
       </button>
