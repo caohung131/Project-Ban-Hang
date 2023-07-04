@@ -224,6 +224,11 @@ const ContentLeftRight = (props) => {
         <div className="buyy">
           <div className="buyy-item1">
             <button
+              style={{
+                border: "none",
+                backgroundColor: "#cb1c22",
+                color: "#fff",
+              }}
               onClick={() => {
                 notify();
                 onAdd({ name, price: cost, id, avatar: imageChange1 });
