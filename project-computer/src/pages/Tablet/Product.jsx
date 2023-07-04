@@ -3,7 +3,7 @@ import Cardproduct from "../main/Cardproduct";
 
 const Product = ({ list }) => {
   const a = list.filter((item) => {
-    return item.category.includes("phone");
+    return item.category.includes("tablet");
   });
 
   return (

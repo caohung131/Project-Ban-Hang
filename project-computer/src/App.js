@@ -8,6 +8,9 @@ import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart.jsx";
 import Phone from "./pages/phone/Phone.jsx";
+import Tablet from "./pages/Tablet/Tablet.jsx";
+import OldProduct from "./pages/oldProduct/OldProduct.jsx";
+import Accessories from "./pages/accessories/Accessories.jsx";
 import Index from "./components/Index.jsx";
 import { ContextProvider } from "./context/Context";
 
@@ -19,11 +22,14 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path='/details/:blogId' element={<Index />}></Route>
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/Phone" element={<Phone />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/phone" element={<Phone />} />
+          <Route path="/tablet" element={<Tablet />} />
+          <Route path="/oldproduct" element={<OldProduct />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/details/:blogId" element={<Index />}></Route>
           <Route path="/components/:blogId" element={<Index />} />
         </Routes>
 

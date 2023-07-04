@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
+import debounce from "lodash.debounce";
 
 export const Context = createContext();
 export const ContextProvider = (props) => {
+  const localStorageItems = JSON.parse(localStorage.getItem("cartItems"));
   const [product, setProduct] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(localStorageItems || []);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   useEffect(() => {
     fetch(`https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs`)
@@ -43,15 +49,55 @@ export const ContextProvider = (props) => {
     }
   };
 
-  // SEARCH
-  const [value, setValue] = useState("");
-  const onchange = (e) => {
-    setValue(e.target.value);
+  // SORT
+  const sortProduct = (sortBy) => {
+    let sortedProduct = [...product];
+
+    if (sortBy === "asc") {
+      sortedProduct.sort((a, b) => a.cost - b.cost);
+    } else if (sortBy === "desc") {
+      sortedProduct.sort((a, b) => b.cost - a.cost);
+    }
+
+    setProduct(sortedProduct);
   };
-  const onSearch = (searchTerm) => {
-    setValue(searchTerm);
-    console.log(searchTerm);
+
+  // LOGIN
+  const [isLogin, setIsLogin] = useState(false);
+
+  //SEARCH
+  const [keyword, setKeyword] = useState("");
+  const [searchProduct, setSearchProduct] = useState([]);
+
+  const handleClickSearch = () => {
+    const result = product.filter((product) => {
+      return product.name.toLowerCase().includes(keyword);
+    });
+
+    setSearchProduct(result);
+    setKeyword("");
   };
+
+  // MAINPAGE
+  const [listProduct, setListProduct] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const handleSelectPage = (pg) => {
+    setPage(pg);
+  };
+  const [load, setLoad] = useState(true);
+  useEffect(() => {
+    fetch(
+      `https://6491ce492f2c7ee6c2c8efa9.mockapi.io/api/v1/blogs?page=${page}&limit=8`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setListProduct(data);
+        setLoad(false);
+      });
+  }, [page]);
 
   const contextValue = {
     product,
@@ -60,10 +106,18 @@ export const ContextProvider = (props) => {
     setCartItems,
     onAdd,
     onRemove,
-    value,
-    setValue,
+    handleClickSearch,
     onchange,
-    onSearch,
+    isLogin,
+    setIsLogin,
+    keyword,
+    setKeyword,
+    searchProduct,
+    handleSelectPage,
+    listProduct,
+    load,
+    page,
+    sortProduct,
   };
   // console.log(cartItems);
   return (
