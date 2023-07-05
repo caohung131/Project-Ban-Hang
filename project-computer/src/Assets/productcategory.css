@@ -1,34 +1,9 @@
-ul {
-  list-style-type: none;
-}
-
-.category-container {
-  width: 70%;
-  margin: auto;
-  margin-top: 2%;
+.homepage {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 0%;
-}
-.category {
-  display: flex;
-  flex-direction: row;
-}
-
-.category-list {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  width: 70%;
+  margin: auto;
 }
-.product-option {
-  border: none;
-}
-.price-option {
-  border: none;
-}
-li {
-  padding-left: 1%;
-  padding-right: 1%;
+@media screen and (min-width: 641px) and (max-width: 1024px) {
 }

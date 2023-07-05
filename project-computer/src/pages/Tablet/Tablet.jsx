@@ -7,7 +7,7 @@ import Product from "./Product";
 import Emty from "./Emty";
 import { Context } from "../../context/Context";
 
-const Phone = () => {
+const Tablet = () => {
   const { product, sortProduct } = useContext(Context);
 
   const [page, setPage] = useState(1);
@@ -15,7 +15,7 @@ const Phone = () => {
   const [resultFound, setResultFound] = useState(true);
   const [list, setList] = useState(product);
   const [brand, setBrand] = useState([
-    { id: 1, checked: false, label: "iPhone" },
+    { id: 1, checked: false, label: "ipad" },
     { id: 2, checked: false, label: "Samsung" },
     { id: 3, checked: false, label: "Xiaomi" },
     { id: 4, checked: false, label: "Realme" },
@@ -73,7 +73,7 @@ const Phone = () => {
       <div style={{ width: "70%", margin: "auto" }}>
         <section class="section-pagetop bg">
           <div class="container">
-            <h2 class="title-page">Điện thoại</h2>
+            <h2 class="title-page">Máy tính bảng</h2>
           </div>
         </section>
 
@@ -163,4 +163,4 @@ const Phone = () => {
     </>
   );
 };
-export default Phone;
+export default Tablet;

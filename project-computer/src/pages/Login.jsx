@@ -1,80 +1,74 @@
-import React, { useEffect, useState } from "react";
-import "../Assets/signin.css";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Context } from "../context/Context";
 
-const Login = () => {
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
-  // const navigate = useNavigate();
+const LoginForm = () => {
+  const { setIsLogin } = useContext(Context);
 
-  const handleChange = (event) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({});
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.get(
+        "https://6485ce2fa795d24810b7565b.mockapi.io/api/v1/register"
+      );
+      const userData = response.data;
+      console.log(userData);
+      const foundEmail = userData.find((user) => user.email === email);
+      console.log(foundEmail);
+
+      if (foundEmail && foundEmail.password === password) {
+        setIsLogin(true);
+        navigate("/");
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+      } else {
+        setError("email hoặc mật khẩu không hợp lệ");
+      }
+    } catch (error) {
+      setError("Lỗi");
+    }
   };
 
-  const handleFormsubmit = (event) => {
-    event.preventDefault();
-  };
-
-  // useEffect(() => {
-  //   if (localStorage.getItem("user-info")) {
-  //     navigate("/Homepage");
-  //   }
-  // }, []);
-
-  // async function handleChange(e) {
-  //   e.preventDefault();
-
-  //   let item = { values };
-  //   let result = await fetch(
-  //     "https://6485ce2fa795d24810b7565b.mockapi.io/api/v1/register",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "content-type": "application/json",
-  //         Accept: "application/json",
-  //       },
-  //       body: JSON.stringify(item),
-  //     }
-  //   );
-  //   result = await result.json();
-  //   localStorage.setItem("user-info", JSON.stringify(result));
-  //   navigate("/");
-  // }
   return (
-    <>
-      <div className="looggin" onSubmit={handleFormsubmit}>
-        <h1>Đăng nhập</h1>
-        <form>
-          <input
-            placeholder="     Tên đăng nhập/Email/Số điện thoại"
-            type="text"
-            value={values.email}
-            onChange={handleChange}
-            className="sign-input"
-            name="email"
-          />{" "}
-          <br /> <br />
-          <input
-            placeholder="     Mật khẩu"
-            type="password"
-            name="password"
-            id=""
-            value={values.password}
-            onChange={handleChange}
-            className="sign-input"
-          />
-          <br />
-          <br />
-          <br />
-          <button className="log-btn" onSubmit={handleFormsubmit}>
-            ĐĂNG NHẬP
-          </button>
-        </form>
+    <form onSubmit={handleSubmit} className="form-register">
+      <h1>Đăng nhập</h1>
+      <div>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Nhập email"
+          className="sign-input"
+        />
       </div>
-    </>
+      <br />
+
+      <div>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="nhập mật khẩu"
+          className="sign-input"
+        />
+      </div>
+      <br />
+      <br />
+
+      <button type="submit" className="log-btn">
+        ĐĂNG NHẬP
+      </button>
+      {error && <p>{error}</p>}
+    </form>
   );
 };
 
-export default Login;
+export default LoginForm;
