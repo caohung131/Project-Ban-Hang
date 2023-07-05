@@ -19,7 +19,9 @@ import Admin from "./Page/Admin";
 import ToDoApp from "./Page/Admin/ToDoApp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react';
+
+import LoginAdmin from "./Page/Admin/LoginAdmin";
 
 function App() {
 
@@ -27,12 +29,14 @@ function App() {
 
   console.log("location: ", location);
   
+  const [isLogginAdmin, setIsLoggin] = useState(false); 
 
 
   return (
     <div className="App">
       {
-        location?.pathname?.includes("/admin") ? <Admin /> : <ContextProvider>
+        location?.pathname?.includes("/admin") ? (isLogginAdmin) ? <Admin /> : < LoginAdmin setIsLoggin={setIsLoggin}/>
+        : <ContextProvider>
         <Header></Header>
         <Nav />
         <Routes>

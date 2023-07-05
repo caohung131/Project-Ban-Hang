@@ -94,6 +94,7 @@
 
  .show {
    display: block !important;
+   background-color: #212a39 !important;
  }
 
 
@@ -135,14 +136,21 @@
    justify-content: space-between;
  }
 
- .action-header {
+ .action-header-admin {
   position: absolute;
   right: 0;
   top: 40px;
   z-index: 1;
-  width: 100%;
-  background-color: #212a39;
-  color: white;
+  width: 100% !important;
+  background-color: #212a39 !important;
+  color: white !important;
+  height: 70px;
+  border-radius: 5%;
+ }
+
+ .action-header-admin a {
+  background-color: #212a39 !important;
+  z-index: 10;
  }
  
  

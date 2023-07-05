@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background-color: gainsboro; */
-}
 
-.container {
+.container-login {
     width: 50%;
     margin: auto;
     /* margin-top: 30vh; */

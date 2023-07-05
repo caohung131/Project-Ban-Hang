@@ -49,7 +49,7 @@ const HeaderIndex = (prop) => {
             </div>
             <p className="name-user">Hung</p>
             <i className="fas fa-angle-down" />
-            <div className={`action-header ${prop.subLogout ? "show" : "none"}`}>
+            <div className={`action-header-admin ${prop.subLogout ? "show" : "none"}`}>
               
               <a
                 to="/"
