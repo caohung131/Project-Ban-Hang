@@ -4,22 +4,29 @@
     box-sizing: border-box;
 }
 
+.PageLoginAdmin {
+    display: flex;
+    background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg);
+    height: 100vh;
+}
+
+
 
 .container-login {
-    width: 50%;
-    margin: auto;
+    width: 40%;
+    margin: 25vh auto;
     /* margin-top: 30vh; */
     background-color: white;
+    
 }
 
 .form-login-wrap {
-    border: 1px solid gray;
     border-radius: 1%;
     padding: 5% 10%;
 }
 
 .form-login-wrap .itemt {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .form-login-wrap .itemt input {
@@ -32,7 +39,7 @@
 .submit {
     width: 100%;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: rgb(105, 105, 245);
     border: none;
     border-radius: 2px;

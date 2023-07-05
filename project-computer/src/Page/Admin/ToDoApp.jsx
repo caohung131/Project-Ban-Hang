@@ -297,7 +297,7 @@ const ToDoApp = () => {
         <hr/>
         <div className="table-pageTodoap">
           {/* table test andt */}
-          <Table columns={columns} dataSource={data2} className="table-pageTodoapMain"/>
+          <Table columns={columns} dataSource={data2} className="table-pageTodoapMain" xs={24} xm={24} md={24} lg={24} xl={24} />
         </div>
       </div>
     </DataContext.Provider>

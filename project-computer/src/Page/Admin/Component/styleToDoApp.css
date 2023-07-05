@@ -103,3 +103,7 @@ tr {
 .action-header {
     border-radius: 5px;
 }
+
+.table-pageTodoap {
+    width: 100%;
+}
