@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.40c5a101.css",
-    "main.js": "/static/js/main.81a1cd13.js",
-    "static/media/avatar-gau.png": "/static/media/avatar-gau.eaf87fb2b10949658ae3.png",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.40c5a101.css.map": "/static/css/main.40c5a101.css.map",
-    "main.81a1cd13.js.map": "/static/js/main.81a1cd13.js.map"
+    "main.css": "/Project-Ban-Hang/static/css/main.40c5a101.css",
+    "main.js": "/Project-Ban-Hang/static/js/main.bb06d4ad.js",
+    "static/media/avatar-gau.png": "/Project-Ban-Hang/static/media/avatar-gau.eaf87fb2b10949658ae3.png",
+    "static/media/logo.svg": "/Project-Ban-Hang/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Project-Ban-Hang/index.html",
+    "main.40c5a101.css.map": "/Project-Ban-Hang/static/css/main.40c5a101.css.map",
+    "main.bb06d4ad.js.map": "/Project-Ban-Hang/static/js/main.bb06d4ad.js.map"
   },
   "entrypoints": [
     "static/css/main.40c5a101.css",
-    "static/js/main.81a1cd13.js"
+    "static/js/main.bb06d4ad.js"
   ]
 }
