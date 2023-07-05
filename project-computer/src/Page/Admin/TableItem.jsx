@@ -136,6 +136,8 @@ const TableItem = (props) => {
         onOk={handleOk2}
         onCancel={handleCancel2}
         className="modalAll"
+        width={1000}
+
       >
         <div className="add-user-admin displayFlex">
           year <Input onChange={handleOnChange} value={year} className="input-user-admin"></Input>
@@ -150,7 +152,7 @@ const TableItem = (props) => {
           status <Input onChange={handleOnChange4} value={"COMPLETED"} className="input-user-admin"></Input>
         </div>
         <div className="displayFlex">
-          cost <input onChange={handleOnChange5} value={cost} className="input-user-admin"></input>
+          cost <Input onChange={handleOnChange5} value={cost} className="input-user-admin"></Input>
         </div>
       </Modal>
       <tr>
