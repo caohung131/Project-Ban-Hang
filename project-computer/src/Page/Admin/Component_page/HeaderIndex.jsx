@@ -4,6 +4,9 @@ import React from "react";
 import gau from "../Image/avatar-gau.png";
 import {Routes, Route} from 'react-router-dom'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const HeaderIndex = (prop) => {
@@ -17,9 +20,10 @@ const HeaderIndex = (prop) => {
     window.location = '/'
   }
   
-
+  const notify = () => toast("Wow so easy!");
 
   return (
+    
     <>
       <div className="derectional">
         <div className="menu-nav-togger">
@@ -52,7 +56,7 @@ const HeaderIndex = (prop) => {
             <div className={`action-header-admin ${prop.subLogout ? "show" : "none"}`}>
               
               <a
-                to="/"
+                onClick={() => alert('Tính năng này đang được phát triển')}
                 className="log-out"
                 style={{
                   margin: 10,

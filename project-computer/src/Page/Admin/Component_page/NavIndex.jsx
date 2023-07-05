@@ -11,13 +11,17 @@ import { Button, Col, Menu } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const NavIndex = () => {
   const navigate = useNavigate();
+  
 
   const [collapsed, setCollapsed] = useState(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
+
+
   function getItem(label, key, icon, children, type) {
     return {
       key,
@@ -30,7 +34,7 @@ const NavIndex = () => {
   const items = [
     getItem("Admin", "admin", <PieChartOutlined />),
     getItem("To do app", "todo", <DesktopOutlined />),
-    getItem("Contact", "3", <ContainerOutlined />),
+    getItem("Contact", "contact", <ContainerOutlined />),
     getItem("Navigation One", "sub1", <MailOutlined />, [
       getItem("Option 5", "5"),
       getItem("Option 6", "6"),
@@ -51,10 +55,13 @@ const NavIndex = () => {
   const handleRedirectPage = (element)=>{
     if(element.key === "admin"){
       navigate("/admin")
-    } else{
+    } else if(element.key === 'todo') {
       navigate(`/admin/${element.key}`)
+    } else{
+      alert('Tính năng này đang được phát triển')
+      // navigate(`/admin/${element.key}`)
     console.log("element: ", element.key)
-    }
+    } 
     
   }
 
