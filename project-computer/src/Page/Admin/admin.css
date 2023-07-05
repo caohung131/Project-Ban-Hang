@@ -96,6 +96,23 @@
    display: block !important;
  }
 
+ .add-user-admin {
+
+ }
+
+
+
+.input-user-admin {
+  width: 80%;
+}
+
+.displayFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
 
  .main-app .derectional {
    display: flex;

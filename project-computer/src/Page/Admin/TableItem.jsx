@@ -1,4 +1,4 @@
-import { Button, Modal } from "antd";
+import { Button, Input, Modal } from "antd";
 import React, { useEffect, useState } from "react";
 import SubCRUD from "./SubCRUD.jsx";
 
@@ -112,21 +112,21 @@ const TableItem = (props) => {
         onCancel={handleCancel}
         width={1000}
       >
-        <div className="add">
-          year <input onChange={handleOnChange}></input>
+        <div className="add displayFlex"  >
+          year <Input onChange={handleOnChange} className="input-user-admin"></Input>
         </div>
-        <div>
-          unit <input onChange={handleOnChange2}></input>
+        <div className="displayFlex">
+          unit <Input onChange={handleOnChange2} className="input-user-admin"></Input>
         </div>
-        <div>
-          useGain <input onChange={handleOnChange3}></input>
+        <div className="displayFlex">
+          useGain <Input onChange={handleOnChange3} className="input-user-admin"></Input>
         </div>
-        <div>
-          userLost <input onChange={handleOnChange4}></input>
+        <div className="displayFlex">
+          userLost <Input onChange={handleOnChange4} className="input-user-admin"></Input>
         </div>
 
-        <div>
-          cost <input onChange={handleOnChange5}  ></input>
+        <div className="displayFlex">
+          cost <Input onChange={handleOnChange5}   className="input-user-admin"></Input>
         </div>
       </Modal>
 
@@ -135,21 +135,22 @@ const TableItem = (props) => {
         open={isModalOpen2}
         onOk={handleOk2}
         onCancel={handleCancel2}
+        className="modalAll"
       >
-        <div className="add">
-          year <input onChange={handleOnChange} value={year}></input>
+        <div className="add-user-admin displayFlex">
+          year <Input onChange={handleOnChange} value={year} className="input-user-admin"></Input>
         </div>
-        <div>
-          useGain <input onChange={handleOnChange2} value={useGain}></input>
+        <div className="displayFlex">
+          useGain <Input onChange={handleOnChange2} value={useGain} className="input-user-admin"></Input>
         </div>
-        <div>
-          userLost <input onChange={handleOnChange3} value={userLost} ></input>
+        <div className="displayFlex"> 
+          userLost <Input onChange={handleOnChange3} value={userLost} className="input-user-admin"></Input>
         </div>
-        <div>
-          status <input onChange={handleOnChange4} value={"COMPLETED"}></input>
+        <div className="displayFlex">
+          status <Input onChange={handleOnChange4} value={"COMPLETED"} className="input-user-admin"></Input>
         </div>
-        <div>
-          cost <input onChange={handleOnChange5} value={cost} ></input>
+        <div className="displayFlex">
+          cost <input onChange={handleOnChange5} value={cost} className="input-user-admin"></input>
         </div>
       </Modal>
       <tr>
