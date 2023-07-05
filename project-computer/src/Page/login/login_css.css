@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: gainsboro; */
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    /* margin-top: 30vh; */
+    background-color: white;
+}
+
+.form-login-wrap {
+    border: 1px solid gray;
+    border-radius: 1%;
+    padding: 5% 10%;
+}
+
+.form-login-wrap .itemt {
+    margin-top: 10px;
+}
+
+.form-login-wrap .itemt input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.submit {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(105, 105, 245);
+    border: none;
+    border-radius: 2px;
+}
+
+.forgot-password {
+    display: flex;
+}
+
+.forgot-password a {
+    margin-left: 5px;
+}

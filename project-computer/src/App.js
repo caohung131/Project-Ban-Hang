@@ -1,3 +1,4 @@
+import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Layout/Header";
 import Nav from "./Layout/Nav";
@@ -5,16 +6,30 @@ import Footer from "./Layout/Footer";
 import Homepage from "./pages/main/Homepage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Cart from "./pages/Cart.jsx";
 import Phone from "./pages/phone/Phone.jsx";
 import Index from "./components/Index.jsx";
 import { ContextProvider } from "./context/Context";
+import style from "./Assets/style.css";
+import Admin from "./Page/Admin";
+import ToDoApp from "./Page/Admin/ToDoApp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {useEffect, useState} from 'react'
 
 function App() {
+
+  const location = useLocation();
+
+  console.log("location: ", location);
+  
+
+
   return (
     <div className="App">
-      <ContextProvider>
+      {
+        location?.pathname?.includes("/admin") ? <Admin /> : <ContextProvider>
         <Header></Header>
         <Nav />
         <Routes>
@@ -29,7 +44,12 @@ function App() {
 
         {/* <Login /> */}
         <Footer></Footer>
+
+        
       </ContextProvider>
+      }
+      
+      
     </div>
   );
 }

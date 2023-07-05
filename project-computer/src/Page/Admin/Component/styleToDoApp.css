@@ -1,0 +1,105 @@
+/*  */
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.toDoApp {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;   
+}
+
+/* .valueShow {
+    width: 90%;
+} */
+
+.table tr td:nth-of-type(2) {
+    width: 30%;
+}
+
+.table tr td {
+    justify-content: space-around;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* tr td:nth-of-type(0) {
+    width: 90%;
+} */
+
+tr {
+    border: 1px solid rgb(211, 209, 209);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 40%;
+}
+
+.img-quote {
+    display: flex;
+    justify-content: center;
+}
+
+.pageToDo {
+    display: flex;
+}
+
+.content-main-left {
+    width: 40%;
+    text-align: center;
+}
+
+.content-main-right {
+    width: 60%;
+    text-align: center;
+}
+
+.Quote-name {
+    margin-bottom: 50px;
+}
+
+.cart-itemt-interView {
+    width: 24% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    
+}
+
+.trTodoapp {
+    display: flex !important;
+    align-items: center;
+}
+
+.buttonComplete {
+    display: flex;
+    align-items: center;
+}
+
+.table-pageTodoapMain {
+    width: 100% !important;
+    display: flex;
+
+}
+
+.log-out {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly !important;
+}
+
+.action-header {
+    border-radius: 5px;
+}
