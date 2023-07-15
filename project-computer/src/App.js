@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       {
-        location?.pathname?.includes("/admin") ? (isLogginAdmin) ? <Admin /> : < LoginAdmin setIsLoggin={setIsLoggin}/>
+        location?.pathname?.includes("/admin") ? (!isLogginAdmin) ? <Admin /> : < LoginAdmin setIsLoggin={setIsLoggin}/>
         : <ContextProvider>
         <Header></Header>
         <Nav />

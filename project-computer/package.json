@@ -2,6 +2,7 @@
   "name": "project-computer",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://caohung131.github.io/Project-Ban-Hang/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -33,6 +34,7 @@
     "react-router-dom": "^6.13.0",
     "react-open-weather": "^1.3.2",
     "react-router-dom": "^6.14.1",
+    
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
     "reactstrap": "^9.1.10",
@@ -42,7 +44,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
